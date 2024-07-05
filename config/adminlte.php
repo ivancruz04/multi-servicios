@@ -109,11 +109,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => '/img/navbar-logo.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'width' => 130,
+            'height' => 100,
         ],
     ],
 
@@ -130,9 +130,9 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_image' => true,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
 
@@ -291,7 +291,6 @@ return [
 
     'menu' => [
         // Navbar items:
-        
         ['header' => 'ADMINISTRADOR', 'can'  => 'vistasAdmin'],
         [
             'text' => 'Inicio',
@@ -304,7 +303,6 @@ return [
             'url'  => 'admin/catalogos',
             'icon' => 'bi bi-journal-check',
             'can'  => 'vistasAdmin'
-
         ],
         [
             'text'    => 'Usuarios',
@@ -325,6 +323,29 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Cotizaciónes',
+            'icon'    => 'bi bi-file-ruled-fill',
+            'can'  => 'vistasAdmin',
+            'url'  => 'admin/solicitudes/proveedores',
+        ],
+        [
+            'text'    => 'Solicitudes',
+            'icon'    => 'bi bi-person-fill-add',
+            'can'  => 'vistasAdmin',
+            'url'  => 'admin/solicitudes/proveedores',
+            
+            // 'submenu' => [
+            //     [
+            //         'text' => 'Proveedores',
+            //         'url'  => 'admin/solicitudes/proveedores',
+            //     ],
+            //     // [
+            //     //     'text' => 'Clientes',
+            //     //     'url'  => 'admin/solicitudes/clientes',
+            //     // ],
+            // ],
+        ],
         ['header' => 'PROVEEDOR', 'can'  => 'vistasProveedor'],
         [
             'text' => 'Inicio',
@@ -342,96 +363,36 @@ return [
         ],
         [
             'text'    => 'Cotizaciónes',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'bi bi-file-ruled-fill',
             'can'  => 'vistasProveedor',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
+            'url'  => '/proveedor/cotizaciones',
+
         ],
         ['header' => 'CLIENTE', 'can'  => 'vistasCliente'
         ],
         [
             'text' => 'Inicio',
             'url'  => 'cliente/inicio',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-home',
             'can'  => 'vistasCliente'
 
+        ],[
+            'text' => 'Ver proveedores',
+            'url'  => '/cliente/proveedores',
+            'icon' => 'fas fa-fw fa-eye',
+            'can'  => 'vistasCliente'
         ],
         [
             'text' => 'Mis cotizaciones',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'url'  => '/cliente/cotizaciones',
+            'icon' => 'bi bi-file-ruled-fill',
             'can'  => 'vistasCliente'
         ],
         [
             'text'    => 'Mi informacón',
-            'icon'    => 'fas fa-fw fa-share',
+            'url'  => '/cliente/informacion',
+            'icon'    => 'fas fa-fw fa-user',
             'can'  => 'vistasCliente',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
         ],
     ],
 

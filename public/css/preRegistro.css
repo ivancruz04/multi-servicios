@@ -1,0 +1,25 @@
+body {
+    background-image: url('/img/header-bg.jpg');
+    background-size: cover; /* Para ajustar la imagen al tamaño de la ventana del navegador */
+}
+
+.card-header {
+    background-color: #ffffff; /* Color de fondo de la card */
+    padding: 20px;
+    border: 1px solid #ccc;
+    opacity: 0.7; /* Opacidad al 70% */
+}
+
+.img-cliente:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    position: relative;
+    transition: transform 0.8s ease;
+}
+
+.img-proveedor:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    position: relative;
+    transition: transform 0.8s ease;
+}

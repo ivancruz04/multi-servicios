@@ -1,0 +1,29 @@
+/* Estilo para ocultar los radios */
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Estilo para los íconos de estrella */
+.star-rating label {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+    margin: 0 5px;
+}
+
+/* Estilo para el ícono de estrella seleccionado */
+.star-rating input[type="radio"]:checked + label {
+    color: #ffdb58;
+}
+
+/* Estilo para las etiquetas de texto */
+.rating-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.label {
+    font-size: 14px;
+    color: #555;
+}

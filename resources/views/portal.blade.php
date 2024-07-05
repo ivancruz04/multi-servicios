@@ -8,7 +8,7 @@
     <meta name="author" content="" />
     <title>Qwikly - Bienvenido</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -196,7 +196,7 @@
                         <p class="lead text-muted mb-5">En nuestro portal puedes solicitar u ofrecer un servicio facil y rapido!... Comienza ahora para satisfacer tus necesidades.</p>
                         <div class="d-flex flex-column flex-lg-row align-items-between">
                             <a class="btn btn-primary btn-md" href="/login">Ingresar</a>
-                            <a class="btn btn-primary btn-md" href="#services">Registrarme</a>
+                            <a class="btn btn-primary btn-md" href="/seleccion">Registrarme</a>
                         </div>
                     </div>
                 </div>
